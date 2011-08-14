@@ -1245,7 +1245,7 @@ this IDbConnection cnn, string sql, Func<TFirst, TSecond, TThird, TFourth, TRetu
                 var val = r.GetValue(index);
                 if (val == DBNull.Value)
                 {
-                    val = null;
+                    val = default(T);
                 }
                 return (T)val;
             };
